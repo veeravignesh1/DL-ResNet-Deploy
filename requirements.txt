@@ -1,7 +1,12 @@
 flask
+gunicorn
 torch
 torchvision
 Pillow
 numpy
+pandas
+matplotlib
+scikit-learn
+Jinja2
 tqdm
 
