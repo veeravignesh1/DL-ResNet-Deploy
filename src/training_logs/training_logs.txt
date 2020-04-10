@@ -1,0 +1,3 @@
+Saving the current best model. Previous best loss = inf Current best loss = 1.2335891706466675
+[ Epochs 0 | 5 ] :  train Loss: 1.5147 Acc: 0.4380 val Loss: 1.2336 Acc: 0.5583
+[ Epochs 1 | 5 ] :  train Loss: 1.0764 Acc: 0.6103 val Loss: 1.2530 Acc: 0.5835

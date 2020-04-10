@@ -1,0 +1,125 @@
+<html>
+<head>
+<style>
+
+body {
+  background: #D4EFDF;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  width: 600px;
+  border-radius: 5px;
+}
+    
+.heading {
+  background: #196F3D;
+  color: white;
+  width: 600px;
+  height: 50px;
+  font-size: 30px;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 25px;
+  border: 3px solid #196F3D;
+  padding-right:55px
+}
+    
+.holder{
+  background: #F2F5F8;
+  color: black;
+  width: 600px;
+  height: 400px;
+  font-size: 14px;
+  float: left;
+  border: 3px solid #196F3D;
+  align-items: center;
+  align-content: center;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+}
+ /*   
+.holder input {
+  float: left;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+/*  border: none;*/
+  cursor: pointer;
+/*  font-weight: bold;*/
+  background: #F2F5F8;
+    padding-top:15px
+}*/
+
+.holder.btn {
+  float: left;
+  color: #27AE60;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #F2F5F8;
+}
+    
+/*
+.holder button:hover {
+  color: #196F3D;
+}
+*/
+ 
+.holder btn:hover {
+  color: #196F3D;
+}
+    
+.holder h3{
+  padding-top: 100px;
+  color: #196F3D;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+    
+.holder p{
+  text-align: center;
+  font-size: 14px;
+  
+}
+    
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+  width: 70px;
+  border: 2px solid #27AE60;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+</style>
+    <title>ResNet on CIFAR-10</title>
+<body>
+    <div class="container showtime">
+        <div class="heading">ResNet on CIFAR-10</div>
+        <div class="holder">
+            <p align="center">Upload the image and get results.</p>
+				<form align="center" method="POST" enctype="multipart/form-data" action={{ url_for("upload_image_file") }}>
+				<input type="file" name="file" accept="image/*" class ="btn">
+				&emsp;&emsp;&emsp; <input type="submit" value="Upload" name="submit" class="btn">
+				</form>
+           {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

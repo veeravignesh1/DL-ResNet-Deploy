@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<style>
+
+body {
+  background:#F9EBEA;
+  background-image: url("https://cdn4.vectorstock.com/i/1000x1000/93/93/triangle-multicolored-background-vector-21389393.jpg");
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 40px 0;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  width: 600px;
+  border-radius: 5px;
+}
+    
+.heading {
+  background: #5B2C6F;
+  color: white;
+  width: 615px;
+  height: 30px;
+  line-height: 30px;
+  padding: 20px;
+  float: left;
+  text-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  border: 3px solid #5B2C6F;
+}
+    
+.holder{
+  background: #FEF9E7;
+  color: black;
+  width: 600px;
+  height: 400px;
+  font-size: 14px;
+  float: left;
+  border: 3px solid #5B2C6F;
+  align-items: center;
+  align-content: center;
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+}
+ /*   
+.holder input {
+  float: left;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+/*  border: none;*/
+  cursor: pointer;
+/*  font-weight: bold;*/
+  background: #F2F5F8;
+    padding-top:15px
+}*/
+
+.holder.btn {
+  float: left;
+  color: #27AE60;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #F2F5F8;
+}
+    
+/*
+.holder button:hover {
+  color: #196F3D;
+}
+*/
+ 
+.holder btn:hover {
+  color: #196F3D;
+}
+    
+.holder h3{
+  padding-bottom: 5px;
+  color: #5B2C6F;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+    
+.holder p{
+  text-align: center;
+  font-weight:bold;
+  padding-bottom:20px;
+  font-size: 20px;
+  
+}
+    
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70px;
+  width: 70px;
+  padding-top: 50px;
+  
+}
+
+</style>
+    <meta charset="utf-8">
+    <title>Flask Image Classification</title>
+
+</head>
+
+<body>
+   <div class="container showtime">
+		<a href="/">
+        <div class="heading" >ResNet on CIFAR-10</div>
+		</a>
+        <div class="holder">
+			
+            <p align="center">Upload the image and get results</p>
+			
+				<form align="center" method="POST" enctype="multipart/form-data" action={{ url_for("upload_image_file") }}>
+				<input type="file" name="file" accept="image/*" class ="btn">
+				&emsp;&emsp;&emsp; <input type="submit" value="Upload" name="submit" class="btn">
+				</form>
+           {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>
