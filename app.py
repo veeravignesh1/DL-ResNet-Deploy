@@ -51,7 +51,7 @@ def upload_image_file():
             path = os.path.join(UPLOAD_FOLDER, filename)
             file.save(path)
             result  = infer(path)
-            return render_template("result.html",result=result,image_path = os.path.join(SUB_UPLOAD_FOLDER,filename))
+            return render_template("result.html",result=result,image_path = os.path.join(UPLOAD_FOLDER,filename))
 
 
 if __name__  =="__main__":
