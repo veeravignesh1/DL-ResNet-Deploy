@@ -9,8 +9,8 @@ app = Flask(__name__)
 app.secret_key = "!@#$%^&*()a-=afs;'';312$%^&*k-[;.sda,./][p;/'=-0989#$%^&0976678v$%^&*(fdsd21234266OJ^&UOKN4odsbd#$%^&*(sadg7(*&^%32b342gd']"
 # the upload path for all the files
 
-SUB_UPLOAD_FOLDER = "static/uploadFolder"
-UPLOAD_FOLDER ="flask_api/"+ SUB_UPLOAD_FOLDER
+
+UPLOAD_FOLDER ="static/uploadFolder"
 # a list to track all the files loaded in memory
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 list_of_uploaded_file = []
@@ -18,7 +18,7 @@ list_of_uploaded_file = []
 
 def clean_upload_folder():
     try:
-        shutil.rmtree(UPLOAD_FOLDER + "/")
+        shutil.rmtree(UPLOAD_FOLDER)
     except FileNotFoundError as e:
         pass
 
