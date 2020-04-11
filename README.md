@@ -1,5 +1,5 @@
 ## Deployement of ResNet Architecture
-
+[![HitCount](http://hits.dwyl.com/veeravignesh1/DL-ResNet-Deploy.svg)](http://hits.dwyl.com/veeravignesh1/DL-ResNet-Deploy)
 
 
 ### Team
